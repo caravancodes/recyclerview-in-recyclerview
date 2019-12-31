@@ -3,9 +3,13 @@ package com.frogobox.recyclerviewimpl.ui.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.frogobox.recyclerviewimpl.R
+import com.frogobox.recyclerviewimpl.frogo.FrogoRecyclerViewAdapter
 import com.frogobox.recyclerviewimpl.model.Child
+import com.frogobox.recyclerviewimpl.model.Parent
+import com.frogobox.recyclerviewimpl.ui.adapter.child.ChildViewAdapter
+import com.frogobox.recyclerviewimpl.ui.adapter.parent.ParentViewAdapter
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,19 +24,25 @@ class MainActivity : AppCompatActivity(){
         childs.add(Child("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"))
         return childs
     }
+    
+    private fun adapterChild(listData: MutableList<Child>): FrogoRecyclerViewAdapter<Child> {
+        val adapter = ChildViewAdapter()
+        adapter.setupRequirement(null, listData, R.layout.child_list_item)
+        return adapter
+    }
 
+    private fun listParent(): MutableList<Parent> {
+        val parents = mutableListOf<Parent>()
+        parents.add(Parent("Child", adapterChild(listChild())))
+        parents.add(Parent("Child1", adapterChild(listChild())))
+        parents.add(Parent("Child2", adapterChild(listChild())))
+        return parents
+    }
 
-//    private fun adapterChild(listData: MutableList<Child>): FrogoRecyclerViewAdapter<Child>{
-//
-//        val adapter = ChildViewAdapter()
-//        adapter.setupRequirement()
-//
-//    }
-//
-//    private fun listParent(): MutableList<Parent> {
-//        val parents = mutableListOf<Parent>()
-//        parents.add(Parent())
-//
-//    }
+    private fun adapterParent(): FrogoRecyclerViewAdapter<Parent> {
+        val adapter = ParentViewAdapter()
+        adapter.setupRequirement(null, listParent(), R.layout.parent_list_item)
+        return adapter
+    }
 
 }
