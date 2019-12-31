@@ -3,7 +3,9 @@ RecyclerView inside RecyclerView
 - v1.0 - Development
 
 # About This Project
-
+- Using Library - https://github.com/amirisback/frogo-recycler-view
+- Dataclass containing RecyclerViewAdapter
+- RecyclerView Inside RecyclerView
 
 # Screen Shoot Apps
 <p align="center"><img width="200px" height="360px" src="docs/ss_apps.jpg"></p>
