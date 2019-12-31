@@ -2,6 +2,7 @@ package com.frogobox.recyclerviewimpl.ui.adapter.parent
 
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.frogobox.recyclerviewimpl.frogo.FrogoRecyclerViewAdapter
 import com.frogobox.recyclerviewimpl.frogo.FrogoRecyclerViewHolder
 import com.frogobox.recyclerviewimpl.model.Parent
@@ -34,13 +35,14 @@ class ParentViewAdapter : FrogoRecyclerViewAdapter<Parent>() {
 
     inner class ParentViewHolder(view: View) : FrogoRecyclerViewHolder<Parent>(view) {
 
-        val rv_child = view.rv_list
+        val rv_child = view.child_recycler_view
         val tv_title = view.tv_title
 
         override fun initComponent(data: Parent) {
             super.initComponent(data)
 
             rv_child.adapter = data.adapter
+            rv_child.layoutManager = LinearLayoutManager(rv_child.context, LinearLayoutManager.HORIZONTAL, false)
 
             tv_title.text = data.title
 

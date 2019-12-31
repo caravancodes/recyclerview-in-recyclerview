@@ -2,18 +2,21 @@ package com.frogobox.recyclerviewimpl.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.frogobox.recyclerviewimpl.R
 import com.frogobox.recyclerviewimpl.frogo.FrogoRecyclerViewAdapter
 import com.frogobox.recyclerviewimpl.model.Child
 import com.frogobox.recyclerviewimpl.model.Parent
 import com.frogobox.recyclerviewimpl.ui.adapter.child.ChildViewAdapter
 import com.frogobox.recyclerviewimpl.ui.adapter.parent.ParentViewAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupRecyclerView()
     }
 
     private fun listChild(): MutableList<Child> {
@@ -43,6 +46,11 @@ class MainActivity : AppCompatActivity() {
         val adapter = ParentViewAdapter()
         adapter.setupRequirement(null, listParent(), R.layout.parent_list_item)
         return adapter
+    }
+
+    private fun setupRecyclerView(){
+        parent_recycler_view.adapter = adapterParent()
+        parent_recycler_view.layoutManager = LinearLayoutManager(this)
     }
 
 }
