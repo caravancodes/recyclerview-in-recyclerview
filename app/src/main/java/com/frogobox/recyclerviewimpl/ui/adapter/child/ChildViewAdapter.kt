@@ -1,10 +1,10 @@
-package com.frogobox.recyclerviewimpl.adapter.child
+package com.frogobox.recyclerviewimpl.ui.adapter.child
 
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
-import com.frogobox.recycler.adapter.FrogoRecyclerViewAdapter
-import com.frogobox.recycler.adapter.FrogoRecyclerViewHolder
+import com.frogobox.recyclerviewimpl.frogo.FrogoRecyclerViewAdapter
+import com.frogobox.recyclerviewimpl.frogo.FrogoRecyclerViewHolder
 import com.frogobox.recyclerviewimpl.model.Child
 import kotlinx.android.synthetic.main.child_list_item.view.*
 
@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.child_list_item.view.*
  * LinkedIn : linkedin.com/in/faisalamircs
  * -----------------------------------------
  * FrogoBox Software Industries
- * com.frogobox.recyclerviewimpl.adapter
+ * com.frogobox.recyclerviewimpl.ui.adapter
  *
  */
 class ChildViewAdapter : FrogoRecyclerViewAdapter<Child>() {

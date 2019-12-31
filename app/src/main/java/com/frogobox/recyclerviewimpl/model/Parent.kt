@@ -1,6 +1,6 @@
 package com.frogobox.recyclerviewimpl.model
 
-import com.frogobox.recycler.adapter.FrogoRecyclerViewAdapter
+import com.frogobox.recyclerviewimpl.ui.adapter.FrogoRecyclerViewAdapter
 
 /**
  * Created by Faisal Amir

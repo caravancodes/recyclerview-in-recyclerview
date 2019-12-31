@@ -1,9 +1,9 @@
-package com.frogobox.recyclerviewimpl.adapter.parent
+package com.frogobox.recyclerviewimpl.ui.adapter.parent
 
 import android.view.View
 import android.view.ViewGroup
-import com.frogobox.recycler.adapter.FrogoRecyclerViewAdapter
-import com.frogobox.recycler.adapter.FrogoRecyclerViewHolder
+import com.frogobox.recyclerviewimpl.frogo.FrogoRecyclerViewAdapter
+import com.frogobox.recyclerviewimpl.frogo.FrogoRecyclerViewHolder
 import com.frogobox.recyclerviewimpl.model.Parent
 import kotlinx.android.synthetic.main.parent_list_item.view.*
 
@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.parent_list_item.view.*
  * LinkedIn : linkedin.com/in/faisalamircs
  * -----------------------------------------
  * FrogoBox Software Industries
- * com.frogobox.recyclerviewimpl.adapter
+ * com.frogobox.recyclerviewimpl.ui.adapter
  *
  */
 class ParentViewAdapter : FrogoRecyclerViewAdapter<Parent>() {
@@ -41,7 +41,6 @@ class ParentViewAdapter : FrogoRecyclerViewAdapter<Parent>() {
             super.initComponent(data)
 
             rv_child.adapter = data.adapter
-            rv_child.isViewLinearHorizontal(false)
 
             tv_title.text = data.title
 

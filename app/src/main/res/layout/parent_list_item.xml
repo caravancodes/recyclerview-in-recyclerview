@@ -34,7 +34,7 @@
         android:textSize="20sp"
         android:layout_marginBottom="16dp"/>
 
-    <com.frogobox.recycler.view.FrogoRecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

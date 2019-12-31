@@ -1,11 +1,11 @@
-package com.frogobox.recyclerviewimpl
+package com.frogobox.recyclerviewimpl.frogo
 
 /**
  * Created by Faisal Amir
  * FrogoBox Inc License
  * =========================================
- * RecyclerViewImpl
- * Copyright (C) 31/12/2019.
+ * FrogoRecyclerViewAdapter
+ * Copyright (C) 20/12/2019.
  * All rights reserved
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
@@ -14,11 +14,10 @@ package com.frogobox.recyclerviewimpl
  * LinkedIn : linkedin.com/in/faisalamircs
  * -----------------------------------------
  * FrogoBox Software Industries
- * com.frogobox.recyclerviewimpl
+ * com.frogobox.frogoviewadapter
  *
  */
-interface MainView<T, V> {
-
-    interface FrogoRecyclerViewListener<T>
-
+interface FrogoRecyclerViewListener<T> {
+    fun onItemClicked(data: T)
+    fun onItemLongClicked(data: T)
 }
