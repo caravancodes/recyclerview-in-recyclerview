@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import com.frogobox.recycler.adapter.FrogoRecyclerViewAdapter
 import com.frogobox.recycler.adapter.FrogoRecyclerViewHolder
 import com.frogobox.recyclerviewimpl.model.Parent
+import kotlinx.android.synthetic.main.parent_list_item.view.*
 
 /**
  * Created by Faisal Amir
@@ -33,8 +34,17 @@ class ParentViewAdapter : FrogoRecyclerViewAdapter<Parent>() {
 
     inner class ParentViewHolder(view: View) : FrogoRecyclerViewHolder<Parent>(view) {
 
+        val rv_child = view.rv_list
+        val tv_title = view.tv_title
+
         override fun initComponent(data: Parent) {
             super.initComponent(data)
+
+            rv_child.adapter = data.adapter
+            rv_child.isViewLinearHorizontal(false)
+
+            tv_title.text = data.title
+
         }
     }
 
