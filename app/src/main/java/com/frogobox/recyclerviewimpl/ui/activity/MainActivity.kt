@@ -3,8 +3,8 @@ package com.frogobox.recyclerviewimpl.ui.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.frogobox.recycler.adapter.FrogoRecyclerViewAdapter
 import com.frogobox.recyclerviewimpl.R
-import com.frogobox.recyclerviewimpl.frogo.FrogoRecyclerViewAdapter
 import com.frogobox.recyclerviewimpl.model.Child
 import com.frogobox.recyclerviewimpl.model.Parent
 import com.frogobox.recyclerviewimpl.ui.adapter.child.ChildViewAdapter
