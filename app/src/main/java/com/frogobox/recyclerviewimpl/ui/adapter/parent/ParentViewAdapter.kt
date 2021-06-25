@@ -3,8 +3,8 @@ package com.frogobox.recyclerviewimpl.ui.adapter.parent
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.frogobox.recycler.adapter.FrogoRecyclerViewAdapter
-import com.frogobox.recycler.adapter.FrogoRecyclerViewHolder
+import com.frogobox.recycler.core.FrogoRecyclerViewAdapter
+import com.frogobox.recycler.core.FrogoRecyclerViewHolder
 import com.frogobox.recyclerviewimpl.model.Parent
 import kotlinx.android.synthetic.main.parent_list_item.view.*
 
@@ -39,8 +39,6 @@ class ParentViewAdapter : FrogoRecyclerViewAdapter<Parent>() {
         val tv_title = view.tv_title
 
         override fun initComponent(data: Parent) {
-            super.initComponent(data)
-
             rv_child.adapter = data.adapter
             rv_child.layoutManager = LinearLayoutManager(rv_child.context, LinearLayoutManager.HORIZONTAL, false)
 
