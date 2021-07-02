@@ -1,16 +1,16 @@
-# RecyclerView in RecyclerView by Amirisback
+## RecyclerView in RecyclerView by Amirisback
 RecyclerView inside RecyclerView
 - v1.0 - Development
 
-# About This Project
+## About This Project
 - Using Library - https://github.com/amirisback/frogo-recycler-view
 - Dataclass containing RecyclerViewAdapter
 - RecyclerView Inside RecyclerView
 
-# Screen Shoot Apps
+## Screen Shoot Apps
 <p align="center"><img width="200px" height="360px" src="docs/ss_apps.jpg"></p>
 
-# Colaborator
+## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
 
 - Mail To faisalamircs@gmail.com
@@ -24,6 +24,6 @@ Name Of Contribute
 
 Waiting for your contribute
 
-# Attention !!!
+## Attention !!!
 Please enjoy and don't forget fork and give a star
 - Don't Forget Follow My Github Account
