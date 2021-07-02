@@ -1,4 +1,4 @@
-## RecyclerView in RecyclerView by Amirisback
+## RecyclerView in RecyclerView
 RecyclerView inside RecyclerView
 - v1.0 - Development
 
